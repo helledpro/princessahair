@@ -10,12 +10,14 @@ const photoPositions:Record<string,CSSProperties['objectPosition']>={
 
 export function Placeholder({name,className='' }:{name:string,className?:string}){
   const isHero=name==='hero-main.jpg';
-  return <div className={`placeholder ${className}`}>
+  return <div className={`placeholder ${className}`} role="img" aria-label={`Фото Princessahair: ${name}`}>
+    <span>{name}</span>
     <img
       src={`/images/${name}`}
-      alt="Фото Princessahair"
+      alt=""
       loading={isHero?'eager':'lazy'}
       decoding="async"
+      onError={e=>{e.currentTarget.style.display='none'}}
       style={{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'cover',objectPosition:photoPositions[name]??'center',display:'block',zIndex:2}}
     />
   </div>
