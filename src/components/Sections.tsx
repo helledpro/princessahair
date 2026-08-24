@@ -3,6 +3,7 @@ import {assortment,faqs,processSteps,reviews} from '../data';
 import {Button,MessengerLinks,Placeholder,Section} from './Common';
 
 const bullets=(items:string[])=><ul>{items.map(item=><li key={item}>{item}</li>)}</ul>;
+const reviewPhotos=['quiz-1-1.jpg','hero-main.jpg','b2b-01.jpg'];
 
 export function MainSections(){
   const [open,setOpen]=useState<number|null>(null);
@@ -55,7 +56,7 @@ export function MainSections(){
           </div>
           <small>Индивидуальный подбор под ваш бюджет и задачу</small>
         </div>
-        <Placeholder name="pricing-master.jpg"/>
+        <Placeholder name="quiz-5-4.jpg"/>
       </div>
     </Section>
 
@@ -75,7 +76,7 @@ export function MainSections(){
             {bullets(['Оптовые цены','Большие объёмы в наличии','Гибкие условия сотрудничества','Быстрая комплектация заказов'])}
             <Button id="wholesale">Сотрудничать оптом</Button>
           </div>
-          <Placeholder name="b2b-02.jpg"/>
+          <Placeholder name="process-04.jpg"/>
         </article>
       </div>
     </Section>
@@ -95,8 +96,8 @@ export function MainSections(){
     <Section className="reviews-section">
       <h2>Отзывы и доверие</h2>
       <div className="reviews">
-        {reviews.map(item=><article className="card review-card" key={item[0]}>
-          <div className="avatar">{item[0][0]}</div>
+        {reviews.map((item,index)=><article className="card review-card" key={item[0]}>
+          <div className="avatar"><img src={`/images/${reviewPhotos[index]}`} alt=""/></div>
           <div className="review-head"><b>{item[0]}</b><small>{item[1]}</small></div>
           <p>{item[2]}</p>
         </article>)}
