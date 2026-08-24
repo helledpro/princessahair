@@ -8,14 +8,12 @@ const photoPositions:Record<string,CSSProperties['objectPosition']>={
   'delivery-box.jpg':'center 42%'
 };
 
-const IMAGE_BASE='https://raw.githubusercontent.com/helledpro/princessahair/main/public/images';
-
 export function Placeholder({name,className='' }:{name:string,className?:string}){
   const isHero=name==='hero-main.jpg';
   return <div className={`placeholder ${className}`} role="img" aria-label={`Фото Princessahair: ${name}`}>
     <span>{name}</span>
     <img
-      src={`${IMAGE_BASE}/${name}`}
+      src={`/images/${name}`}
       alt=""
       loading={isHero?'eager':'lazy'}
       decoding="async"
