@@ -1,11 +1,13 @@
 import type {CSSProperties,ReactNode} from 'react';
 
 const photoPositions:Record<string,CSSProperties['objectPosition']>={
-  'hero-main.jpg':'center 28%',
-  'hero-hair-selection.jpg':'center 45%',
-  'quality-main.jpg':'center 42%',
-  'pricing-master.jpg':'center 35%',
-  'delivery-box.jpg':'center 42%'
+  'hero-main.jpg':'center 24%',
+  'hero-hair-selection.jpg':'center 48%',
+  'quality-main.jpg':'center 46%',
+  'pricing-master.jpg':'center 38%',
+  'delivery-box.jpg':'center 48%',
+  'b2b-01.jpg':'center 42%',
+  'b2b-02.jpg':'center 38%'
 };
 
 export function Placeholder({name,className='' }:{name:string,className?:string}){
@@ -22,6 +24,19 @@ export function Placeholder({name,className='' }:{name:string,className?:string}
     />
   </div>
 }
-export function Button({children,id}:{children:ReactNode,id:string}){return <button id={id} className="button" onClick={()=>document.getElementById('quiz')?.scrollIntoView({behavior:'smooth'})}>{children}</button>}
-export function Section({children,className='',id}:{children:ReactNode,className?:string,id?:string}){return <section className={`section ${className}`} id={id}><div className="container">{children}</div></section>}
-export function MessengerLinks(){return <nav className="messengers" aria-label="Мессенджеры"><a id="whatsapp" href="#contacts">● WhatsApp</a><a id="telegram" href="#contacts">● Telegram</a><a id="max" href="#contacts">● MAX</a></nav>}
+
+export function Button({children,id}:{children:ReactNode,id:string}){
+  return <button id={id} className="button" type="button" onClick={()=>document.getElementById('quiz')?.scrollIntoView({behavior:'smooth'})}>{children}</button>
+}
+
+export function Section({children,className='',id}:{children:ReactNode,className?:string,id?:string}){
+  return <section className={`section ${className}`} id={id}><div className="container">{children}</div></section>
+}
+
+export function MessengerLinks(){
+  return <nav className="messengers" aria-label="Мессенджеры">
+    <a id="whatsapp" className="wa" href="#contacts"><i/>WhatsApp</a>
+    <a id="telegram" className="tg" href="#contacts"><i/>Telegram</a>
+    <a id="max" className="mx" href="#contacts"><i/>MAX</a>
+  </nav>
+}
