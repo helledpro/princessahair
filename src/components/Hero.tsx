@@ -30,7 +30,7 @@ export function Hero(){
         <div className="hero-visual">
           <Placeholder name="hero-main.jpg"/>
           <div className="overlap">
-            <Placeholder name="hero-hair-selection.jpg"/>
+            <Placeholder name="assortment-05.jpg"/>
             <b><span>✦</span> Большой выбор оттенков<br/> и структур в наличии</b>
           </div>
         </div>
