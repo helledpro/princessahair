@@ -6,4 +6,5 @@ import './hero-fix.css';
 import './quiz-conversion.css';
 import './review-proof.css';
 import './mobile-sticky.css';
+import './legal.css';
 createRoot(document.getElementById('root')!).render(<React.StrictMode><App/></React.StrictMode>);
