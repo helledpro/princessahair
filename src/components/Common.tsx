@@ -13,8 +13,24 @@ const photoPositions:Record<string,CSSProperties['objectPosition']>={
 const contactMessage='Здравствуйте! Хочу подобрать волосы Princessahair.';
 const encodedContactMessage=encodeURIComponent(contactMessage);
 const whatsappUrl=`https://wa.me/79633255266?text=${encodedContactMessage}`;
-const telegramUrl=`tg://resolve?domain=Princessahair_Studio&text=${encodedContactMessage}`;
+const telegramUrl='https://t.me/Princessahair_Studio';
 const maxUrl='https://max.ru/+79633255266';
+
+function copyContactMessage(){
+  if(navigator.clipboard?.writeText){
+    void navigator.clipboard.writeText(contactMessage).catch(()=>{});
+    return;
+  }
+
+  const textarea=document.createElement('textarea');
+  textarea.value=contactMessage;
+  textarea.style.position='fixed';
+  textarea.style.opacity='0';
+  document.body.appendChild(textarea);
+  textarea.select();
+  try{document.execCommand('copy')}catch{}
+  textarea.remove();
+}
 
 export function Placeholder({name,className='' }:{name:string,className?:string}){
   const isHero=name==='hero-main.jpg';
@@ -42,7 +58,7 @@ export function Section({children,className='',id}:{children:ReactNode,className
 export function MessengerLinks(){
   return <nav className="messengers" aria-label="Мессенджеры">
     <a id="whatsapp" className="wa" href={whatsappUrl} target="_blank" rel="noreferrer"><i/>WhatsApp</a>
-    <a id="telegram" className="tg" href={telegramUrl}><i/>Telegram</a>
+    <a id="telegram" className="tg" href={telegramUrl} target="_blank" rel="noreferrer" onClick={copyContactMessage} title="Сообщение скопируется в буфер обмена"><i/>Telegram</a>
     <a id="max" className="mx" href={maxUrl} target="_blank" rel="noreferrer"><i/>MAX</a>
   </nav>
 }
