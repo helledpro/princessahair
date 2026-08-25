@@ -15,7 +15,7 @@ const encodedContactMessage=encodeURIComponent(contactMessage);
 const whatsappUrl=`https://wa.me/79633255266?text=${encodedContactMessage}`;
 const telegramProfileUrl='https://t.me/Princessahair_Studio';
 const telegramMobileUrl=`https://t.me/Princessahair_Studio?text=${encodedContactMessage}`;
-const maxUrl='https://max.ru/+79633255266';
+const maxUrl=`https://max.ru/:share?text=${encodedContactMessage}`;
 
 function copyContactMessage(){
   if(navigator.clipboard?.writeText){
