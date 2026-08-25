@@ -15,7 +15,7 @@ export function Hero(){
             <strong>Princessahair</strong>
           </a>
           <p className="eyebrow">Собственное производство в Санкт-Петербурге<br/><span>• Доставка по России 1–4 дня</span></p>
-          <h1>Подберём натуральные славянские волосы<br/>точно в ваш оттенок по фото</h1>
+          <h1>Подберём натуральные славянские волосы<br/>точно в ваш оттенок</h1>
           <p className="lead">Пришлём реальные фото и видео конкретных вариантов из наличия — выбираете только после того, как увидите волосы</p>
           <div className="hero-facts">
             {facts.map(([image,text])=><div className="hero-fact" key={text}>
@@ -23,7 +23,7 @@ export function Hero(){
               <span>{text}</span>
             </div>)}
           </div>
-          <Button id="hero_quiz">Подобрать волосы по фото →</Button>
+          <Button id="hero_quiz">Подобрать волосы →</Button>
           <small>4–5 вопросов <b>•</b> около 1 минуты <b>•</b> без звонков</small>
         </div>
         <div className="hero-visual">
