@@ -12,7 +12,6 @@ export function Hero(){
       <div className="container hero-grid">
         <div className="hero-copy">
           <a className="logo" href="#" aria-label="Princessahair">
-            <span className="crown">♛</span>
             <strong>Princessahair</strong>
           </a>
           <p className="eyebrow">Собственное производство в Санкт-Петербурге<br/><span>• Доставка по России 1–4 дня</span></p>
