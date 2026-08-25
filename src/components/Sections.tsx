@@ -67,18 +67,6 @@ export function MainSections(){
       </div>
     </Section>
 
-    <Section className="offers">
-      <div className="panel offers-panel">
-        <h2>Спецпредложения</h2>
-        <div className="four-grid icons">
-          {[['◉','Скидки для постоянных клиентов'],['□','Подарки при крупных заказах'],['✿','Индивидуальные условия для студий и салонов'],['⌘','Акции на определённые оттенки и длины']].map(([icon,text])=><div key={text}>
-            <i>{icon}</i><span>{text}</span>
-          </div>)}
-        </div>
-        <Button id="special_offer">Узнать актуальные предложения</Button>
-      </div>
-    </Section>
-
     <Section className="reviews-section">
       <h2>Реальные отзывы клиентов</h2>
       <p className="reviews-subtitle">Что говорят о волосах и подборе наши клиенты</p>
