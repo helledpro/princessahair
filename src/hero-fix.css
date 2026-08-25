@@ -47,4 +47,8 @@ body{overflow-x:hidden}
 @media(max-width:767px){
   .hero>.container{width:min(100% - 24px,560px);max-width:calc(100vw - 24px)}
   .hero-visual:before{display:none}
+  .hero-visual>.placeholder img{object-position:center 32%!important}
+  .overlap{width:158px!important;right:9px!important;bottom:10px!important;padding:5px!important;border-radius:10px!important}
+  .overlap .placeholder{min-height:74px!important;border-radius:7px!important}
+  .overlap b{font-size:9px!important;line-height:1.28!important;padding:6px 3px 4px!important}
 }
