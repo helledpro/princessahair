@@ -1,0 +1,19 @@
+.reviews-section{padding-top:10px;padding-bottom:22px}
+.reviews-section h2{font-size:34px;margin-bottom:7px}
+.reviews-subtitle{text-align:center;margin:0 0 18px;color:var(--muted);font-size:10.5px}
+.review-proof-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;align-items:start;max-width:1060px;margin:0 auto}
+.review-proof-card{margin:0;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+.review-proof-card img{display:block;width:100%;height:auto;object-fit:contain;background:#fff}
+.review-proof-note{text-align:center;margin:13px auto 0;color:#8b8178;font-size:8.5px}
+
+@media(max-width:860px){
+  .review-proof-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:720px}
+}
+
+@media(max-width:767px){
+  .reviews-section h2{font-size:30px}
+  .reviews-subtitle{font-size:10px;margin-bottom:14px}
+  .review-proof-grid{grid-template-columns:1fr;gap:11px;max-width:560px}
+  .review-proof-card{border-radius:10px}
+  .review-proof-note{font-size:8px;margin-top:10px}
+}
