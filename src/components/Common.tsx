@@ -13,7 +13,7 @@ const photoPositions:Record<string,CSSProperties['objectPosition']>={
 const contactMessage='Здравствуйте! Хочу подобрать волосы Princessahair.';
 const encodedContactMessage=encodeURIComponent(contactMessage);
 const whatsappUrl=`https://wa.me/79633255266?text=${encodedContactMessage}`;
-const telegramUrl=`https://t.me/Princessahair_Studio?text=${contactMessage}`;
+const telegramUrl=`tg://resolve?domain=Princessahair_Studio&text=${encodedContactMessage}`;
 const maxUrl='https://max.ru/+79633255266';
 
 export function Placeholder({name,className='' }:{name:string,className?:string}){
@@ -42,7 +42,7 @@ export function Section({children,className='',id}:{children:ReactNode,className
 export function MessengerLinks(){
   return <nav className="messengers" aria-label="Мессенджеры">
     <a id="whatsapp" className="wa" href={whatsappUrl} target="_blank" rel="noreferrer"><i/>WhatsApp</a>
-    <a id="telegram" className="tg" href={telegramUrl} target="_blank" rel="noreferrer"><i/>Telegram</a>
+    <a id="telegram" className="tg" href={telegramUrl}><i/>Telegram</a>
     <a id="max" className="mx" href={maxUrl} target="_blank" rel="noreferrer"><i/>MAX</a>
   </nav>
 }
