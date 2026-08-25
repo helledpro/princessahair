@@ -13,7 +13,7 @@ const photoPositions:Record<string,CSSProperties['objectPosition']>={
 const contactMessage='Здравствуйте! Хочу подобрать волосы Princessahair.';
 const encodedContactMessage=encodeURIComponent(contactMessage);
 const whatsappUrl=`https://wa.me/79633255266?text=${encodedContactMessage}`;
-const telegramUrl=`https://t.me/+79633255266?text=${encodedContactMessage}&profile`;
+const telegramUrl=`https://t.me/+79633255266?text=${encodedContactMessage}`;
 const maxUrl='https://max.ru/+79633255266';
 
 export function Placeholder({name,className='' }:{name:string,className?:string}){
