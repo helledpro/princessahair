@@ -100,7 +100,7 @@ export function MainSections(){
     </Section>
 
     <footer className="final" id="contacts">
-      <div className="container">
+      <div className="container final-main">
         <div>
           <h2>Подберём натуральные славянские волосы<br/>именно под ваш запрос</h2>
           <p>Просто отправьте фото и скажите, что вам нужно —<br/>и мы подберём идеальные варианты из наличия<br/>и отправим реальные фото и видео.</p>
@@ -109,6 +109,38 @@ export function MainSections(){
           <Button id="final_quiz">Подобрать варианты из наличия</Button>
           <MessengerLinks/>
         </div>
+      </div>
+
+      <div className="container business-proof">
+        <div className="business-proof__intro">
+          <strong>Princessahair Studio</strong>
+          <span>Собственное производство в Санкт-Петербурге</span>
+          <span>Работаем с частными клиентами, мастерами и студиями</span>
+          <span>Доставка по России</span>
+        </div>
+        <div className="business-proof__contacts">
+          <b>Студия</b>
+          <span>Новочеркасский просп., 33, корп. 2, Санкт-Петербург</span>
+          <a href="https://yandex.ru/maps/org/princessahair_studio/185516093035" target="_blank" rel="noreferrer">Открыть в Яндекс Картах ↗</a>
+          <a href="https://vk.ru/princessahair" target="_blank" rel="noreferrer">ВКонтакте ↗</a>
+          <a href="tel:+79633255266">+7 963 325-52-66</a>
+        </div>
+        <div className="business-proof__legal">
+          <b>Юридическая информация</b>
+          <span>ИП Курочкина С. В.</span>
+          <span>ИНН 471006851090</span>
+          <span>ОГРНИП 314471006300036</span>
+          <span>ОКПО 0189508647</span>
+          <span>Юридический адрес: 188238, Ленинградская обл., Лужский р-н, г. Луга, ул. Партизанская, д. 30</span>
+        </div>
+      </div>
+
+      <div className="container legal-links">
+        <span>© 2026 Princessahair Studio</span>
+        <nav aria-label="Юридические документы">
+          <a href="/privacy.html" target="_blank" rel="noreferrer">Политика обработки персональных данных</a>
+          <a href="/consent.html" target="_blank" rel="noreferrer">Согласие на обработку персональных данных</a>
+        </nav>
       </div>
     </footer>
   </>;
