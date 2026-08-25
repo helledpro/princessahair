@@ -15,15 +15,15 @@ export function Hero(){
             <strong>Princessahair</strong>
           </a>
           <p className="eyebrow">Собственное производство в Санкт-Петербурге<br/><span>• Доставка по России 1–4 дня</span></p>
-          <h1>Натуральные<br className="hero-break"/> славянские волосы<br/> нужного оттенка,<br/> длины и структуры</h1>
-          <p className="lead">Подберём по фото и пришлём реальные фото и видео вариантов из наличия</p>
+          <h1>Подберём натуральные славянские волосы<br/>точно в ваш оттенок по фото</h1>
+          <p className="lead">Пришлём реальные фото и видео конкретных вариантов из наличия — выбираете только после того, как увидите волосы</p>
           <div className="hero-facts">
             {facts.map(([image,text])=><div className="hero-fact" key={text}>
               <img src={`/images/${image}`} alt=""/>
               <span>{text}</span>
             </div>)}
           </div>
-          <Button id="hero_quiz"><span className="spark">✦</span> Подобрать варианты из наличия</Button>
+          <Button id="hero_quiz">Подобрать волосы по фото →</Button>
           <small>4–5 вопросов <b>•</b> около 1 минуты <b>•</b> без звонков</small>
         </div>
         <div className="hero-visual">
@@ -38,6 +38,11 @@ export function Hero(){
     <div className="contact-strip container">
       <b>Уже знаете, что нужно? Напишите сразу →</b>
       <MessengerLinks/>
+    </div>
+    <div className="trust-strip" aria-label="Преимущества Princessahair">
+      <div className="container">
+        {['100% натуральные волосы','Собственное производство','Реальные фото перед покупкой','Доставка 1–4 дня'].map(item=><span key={item}>{item}</span>)}
+      </div>
     </div>
   </>
 }

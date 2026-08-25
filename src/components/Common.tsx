@@ -61,7 +61,7 @@ export function Placeholder({name,className='' }:{name:string,className?:string}
 }
 
 export function Button({children,id}:{children:ReactNode,id:string}){
-  return <button id={id} className="button" type="button" onClick={()=>document.getElementById('quiz')?.scrollIntoView({behavior:'smooth'})}>{children}</button>
+  return <button id={id} data-cta={id} className="button" type="button" onClick={()=>document.getElementById('quiz')?.scrollIntoView({behavior:'smooth'})}>{children}</button>
 }
 
 export function Section({children,className='',id}:{children:ReactNode,className?:string,id?:string}){
