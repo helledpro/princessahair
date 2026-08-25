@@ -1,0 +1,17 @@
+.mobile-sticky-cta{display:none}
+
+@media(max-width:767px){
+  body{padding-bottom:78px}
+  .mobile-sticky-cta{position:fixed;left:10px;right:10px;bottom:max(10px,env(safe-area-inset-bottom));z-index:1000;display:flex;align-items:center;gap:8px;padding:8px;background:rgba(255,253,249,.96);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 30px rgba(69,44,20,.18);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transform:translateY(calc(100% + 24px));opacity:0;pointer-events:none;transition:transform .22s ease,opacity .22s ease}
+  .mobile-sticky-cta.is-visible{transform:translateY(0);opacity:1;pointer-events:auto}
+  .mobile-sticky-cta .button{flex:1;min-width:0;min-height:46px;padding:0 14px;font-size:12px;white-space:nowrap}
+  .mobile-sticky-cta .messengers{display:flex;gap:6px;flex-wrap:nowrap;justify-content:flex-end}
+  .mobile-sticky-cta .messengers a{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;text-decoration:none;font-size:0;background:#fff;border:1px solid var(--line);box-shadow:0 3px 10px rgba(83,58,32,.07)}
+  .mobile-sticky-cta .messengers i{width:10px;height:10px;margin:0}
+}
+
+@media(max-width:390px){
+  .mobile-sticky-cta{left:8px;right:8px;gap:6px;padding:7px}
+  .mobile-sticky-cta .button{font-size:11px;padding:0 10px}
+  .mobile-sticky-cta .messengers a{width:34px;height:34px}
+}
