@@ -269,7 +269,7 @@ a{color:inherit}
   .section h2,.panel>h2{font-size:30px}
   .hero{background:#fffaf5}
   .hero-grid{display:flex;flex-direction:column;min-height:auto}
-  .hero-copy{padding:24px 4px 20px;order:1}
+  .hero-copy{padding:24px 4px 20px;order:0}
   .logo{font-size:27px}
   .eyebrow{margin-bottom:14px}
   .hero h1{font-size:39px;max-width:none}
@@ -278,7 +278,7 @@ a{color:inherit}
   .hero-facts{width:100%;max-width:none}
   .hero-copy .button{max-width:none;width:100%}
   .hero-copy small{text-align:center;width:100%}
-  .hero-visual{height:475px;order:0;margin:0 -12px}
+  .hero-visual{height:350px;order:1;margin:0 -12px}
   .hero-visual:before{display:none}
   .hero-visual>.placeholder img{-webkit-mask-image:none;mask-image:none}
   .overlap{width:188px;bottom:14px;right:12px}
