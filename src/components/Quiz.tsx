@@ -96,6 +96,7 @@ export function Quiz(){
   const encodedMessage=encodeURIComponent(contactMessage);
   const whatsappUrl=`https://wa.me/79633255266?text=${encodedMessage}`;
   const telegramMobileUrl=`https://t.me/Princessahair_Studio?text=${encodedMessage}`;
+  const maxUrl=`https://max.ru/:share?text=${encodedMessage}`;
 
   const handleTelegramClick=(event:MouseEvent<HTMLAnchorElement>)=>{
     if(isMobileDevice()) return;
@@ -113,6 +114,7 @@ export function Quiz(){
         <div className="quiz-result-links">
           <a className="quiz-messenger wa" href={whatsappUrl} target="_blank" rel="noreferrer"><i/>WhatsApp</a>
           <a className="quiz-messenger tg" href={telegramMobileUrl} target="_blank" rel="noreferrer" onClick={handleTelegramClick}><i/>Telegram</a>
+          <a className="quiz-messenger mx" href={maxUrl} target="_blank" rel="noreferrer"><i/>MAX</a>
         </div>
         <small>После перехода отправьте фото своих волос при дневном освещении — так мы точнее подберём оттенок.</small>
         <button type="button" className="quiz-restart" onClick={()=>{setStep(0);setAnswers([]);setDone(false)}}>Пройти подбор заново</button>
