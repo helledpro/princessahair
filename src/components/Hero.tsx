@@ -1,9 +1,9 @@
 import {Button,MessengerLinks,Placeholder} from './Common';
 
 const facts=[
-  ['assortment-01.jpg','Срезы и капсулы'],
+  ['assortment-01.jpg','100% натуральные волосы'],
   ['assortment-02.jpg','от 12 000 ₽'],
-  ['b2b-01.jpg','для мастеров и опта']
+  ['hero-hair-selection.jpg','Фото конкретных волос перед покупкой']
 ];
 
 export function Hero(){
