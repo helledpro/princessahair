@@ -101,6 +101,6 @@ export function MobileStickyCTA(){
 
   return <aside className={`mobile-sticky-cta ${visible?'is-visible':''}`} aria-label="Быстрый подбор волос">
     <Button id="mobile_sticky_quiz">Подобрать волосы</Button>
-    <MessengerLinks/>
+    <button className="mobile-sticky-top" type="button" aria-label="Наверх" onClick={()=>window.scrollTo({top:0,behavior:'smooth'})}>↑</button>
   </aside>
 }
