@@ -26,8 +26,6 @@ export function MainSections(){
       <div className="six-grid">
         {assortment.map((item,index)=><article key={item[0]}>
           <Placeholder name={`assortment-0${index+1}.jpg`}/>
-          <b>{item[0]}</b>
-          <small>{item[1]}</small>
         </article>)}
       </div>
       <div className="assortment-action">
