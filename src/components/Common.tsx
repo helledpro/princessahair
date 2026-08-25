@@ -15,7 +15,7 @@ const encodedContactMessage=encodeURIComponent(contactMessage);
 const whatsappUrl=`https://wa.me/79633255266?text=${encodedContactMessage}`;
 const telegramProfileUrl='https://t.me/Princessahair_Studio';
 const telegramMobileUrl=`https://t.me/Princessahair_Studio?text=${encodedContactMessage}`;
-const maxUrl=`https://max.ru/:share?text=${encodedContactMessage}`;
+const maxProfileUrl='https://max.ru/u/f9LHodD0cOLI7eBgRW67C5HWZZQB128y7nKqu4YltKxZrV578bHWW_s2Td8';
 
 function copyContactMessage(){
   if(navigator.clipboard?.writeText){
@@ -45,6 +45,10 @@ function handleTelegramClick(event:MouseEvent<HTMLAnchorElement>){
   window.open(telegramProfileUrl,'_blank','noopener,noreferrer');
 }
 
+function handleMaxClick(){
+  copyContactMessage();
+}
+
 export function Placeholder({name,className='' }:{name:string,className?:string}){
   const isHero=name==='hero-main.jpg';
   return <div className={`placeholder ${className}`} role="img" aria-label={`Фото Princessahair: ${name}`}>
@@ -72,6 +76,6 @@ export function MessengerLinks(){
   return <nav className="messengers" aria-label="Мессенджеры">
     <a id="whatsapp" className="wa" href={whatsappUrl} target="_blank" rel="noreferrer"><i/>WhatsApp</a>
     <a id="telegram" className="tg" href={telegramMobileUrl} target="_blank" rel="noreferrer" onClick={handleTelegramClick}><i/>Telegram</a>
-    <a id="max" className="mx" href={maxUrl} target="_blank" rel="noreferrer"><i/>MAX</a>
+    <a id="max" className="mx" href={maxProfileUrl} target="_blank" rel="noreferrer" onClick={handleMaxClick}><i/>MAX</a>
   </nav>
 }
