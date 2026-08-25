@@ -1,8 +1,9 @@
 import {useState} from 'react';
-import {assortment,faqs,processSteps,reviews} from '../data';
+import {assortment,faqs,processSteps} from '../data';
 import {Button,MessengerLinks,Placeholder,Section} from './Common';
 
 const bullets=(items:string[])=><ul>{items.map(item=><li key={item}>{item}</li>)}</ul>;
+const reviewImages=['image (10).png','image (9).png','image (8).png','image (7).png','image (6).png','image (5).png','image (4).png','image (3).png'];
 
 export function MainSections(){
   const [open,setOpen]=useState<number|null>(null);
@@ -80,13 +81,13 @@ export function MainSections(){
 
     <Section className="reviews-section">
       <h2>Реальные отзывы клиентов</h2>
-      <div className="reviews">
-        {reviews.map(item=><article className="card review-card" key={item[0]}>
-          <div className="review-head"><b>{item[0]}</b><small>{item[1]}</small></div>
-          <p>{item[2]}</p>
+      <p className="reviews-subtitle">Что говорят о волосах и подборе наши клиенты</p>
+      <div className="review-proof-grid">
+        {reviewImages.map((image,index)=><article className="review-proof-card" key={image}>
+          <img src={`/images/${image}`} alt={`Реальный отзыв клиента Princessahair ${index+1}`} loading="lazy"/>
         </article>)}
       </div>
-      <p className="review-note">Отзывы приведены по предоставленным клиентами материалам. Скриншоты можно добавить в карточки без изменения их структуры.</p>
+      <p className="review-proof-note">Отзывы опубликованы в исходном виде</p>
     </Section>
 
     <Section className="delivery-section">
