@@ -44,22 +44,6 @@ export function MainSections(){
       </div>
     </Section>
 
-    <Section className="prices-section">
-      <div className="panel price-layout">
-        <div className="price-copy">
-          <h2>Цены</h2>
-          <div className="price-grid">
-            {[['Срезы','от 12 000 ₽'],['Капсулы','от 12 500 ₽'],['Длина 40–70 см','от 12 000 ₽']].map(item=><article className="price-card" key={item[0]}>
-              <b>{item[0]}</b>
-              <strong>{item[1]}</strong>
-            </article>)}
-          </div>
-          <small>Индивидуальный подбор под ваш бюджет и задачу</small>
-        </div>
-        <Placeholder name="quiz-5-4.jpg"/>
-      </div>
-    </Section>
-
     <Section className="b2b-section">
       <div className="b2b">
         <article className="panel b2b-card">
