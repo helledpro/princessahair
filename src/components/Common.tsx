@@ -1,3 +1,4 @@
+import {useEffect,useState} from 'react';
 import type {CSSProperties,MouseEvent,ReactNode} from 'react';
 
 const photoPositions:Record<string,CSSProperties['objectPosition']>={
@@ -78,4 +79,28 @@ export function MessengerLinks(){
     <a id="telegram" className="tg" href={telegramMobileUrl} target="_blank" rel="noreferrer" onClick={handleTelegramClick}><i/>Telegram</a>
     <a id="max" className="mx" href={maxProfileUrl} target="_blank" rel="noreferrer" onClick={handleMaxClick}><i/>MAX</a>
   </nav>
+}
+
+export function MobileStickyCTA(){
+  const [visible,setVisible]=useState(false);
+
+  useEffect(()=>{
+    const updateVisibility=()=>{
+      const hero=document.querySelector('.hero');
+      setVisible(Boolean(hero&&hero.getBoundingClientRect().bottom<=0));
+    };
+
+    updateVisibility();
+    window.addEventListener('scroll',updateVisibility,{passive:true});
+    window.addEventListener('resize',updateVisibility);
+    return ()=>{
+      window.removeEventListener('scroll',updateVisibility);
+      window.removeEventListener('resize',updateVisibility);
+    };
+  },[]);
+
+  return <aside className={`mobile-sticky-cta ${visible?'is-visible':''}`} aria-label="Быстрый подбор волос">
+    <Button id="mobile_sticky_quiz">Подобрать волосы</Button>
+    <MessengerLinks/>
+  </aside>
 }
