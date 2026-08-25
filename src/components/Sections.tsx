@@ -3,7 +3,6 @@ import {assortment,faqs,processSteps,reviews} from '../data';
 import {Button,MessengerLinks,Placeholder,Section} from './Common';
 
 const bullets=(items:string[])=><ul>{items.map(item=><li key={item}>{item}</li>)}</ul>;
-const reviewPhotos=['quiz-1-1.jpg','hero-main.jpg','b2b-01.jpg'];
 
 export function MainSections(){
   const [open,setOpen]=useState<number|null>(null);
@@ -25,12 +24,16 @@ export function MainSections(){
     <Section className="assort">
       <h2>Большой ассортимент</h2>
       <div className="six-grid">
-        {assortment.map((item,index)=><article key={item}>
+        {assortment.map((item,index)=><article key={item[0]}>
           <Placeholder name={`assortment-0${index+1}.jpg`}/>
-          <b>{item}</b>
+          <b>{item[0]}</b>
+          <small>{item[1]}</small>
         </article>)}
       </div>
-      <p className="center">Подберём идеальный вариант под ваш запрос и бюджет</p>
+      <div className="assortment-action">
+        <p>Подберём идеальный вариант под ваш запрос и бюджет</p>
+        <Button id="assortment_quiz">Показать варианты моего оттенка →</Button>
+      </div>
     </Section>
 
     <Section className="quality-section">
@@ -78,15 +81,14 @@ export function MainSections(){
     </Section>
 
     <Section className="reviews-section">
-      <h2>Отзывы и доверие</h2>
+      <h2>Реальные отзывы клиентов</h2>
       <div className="reviews">
-        {reviews.map((item,index)=><article className="card review-card" key={item[0]}>
-          <div className="avatar"><img src={`/images/${reviewPhotos[index]}`} alt=""/></div>
+        {reviews.map(item=><article className="card review-card" key={item[0]}>
           <div className="review-head"><b>{item[0]}</b><small>{item[1]}</small></div>
           <p>{item[2]}</p>
         </article>)}
       </div>
-      <div className="dots">● ● ● ○ ○</div>
+      <p className="review-note">Отзывы приведены по предоставленным клиентами материалам. Скриншоты можно добавить в карточки без изменения их структуры.</p>
     </Section>
 
     <Section className="delivery-section">

@@ -78,6 +78,10 @@ a{color:inherit}
 .messengers a{display:inline-flex;align-items:center;gap:5px;font-size:10px;text-decoration:underline;text-underline-offset:2px;color:#51453c}
 .messengers i{width:7px;height:7px;border-radius:50%;display:inline-block;background:#cf9a42}
 .messengers .wa i{background:#39b96a}.messengers .tg i{background:#3ea5dc}.messengers .mx i{background:#7855d8}
+.trust-strip{border-top:1px solid rgba(234,223,210,.8);border-bottom:1px solid var(--line);background:rgba(250,243,234,.72)}
+.trust-strip>.container{display:grid;grid-template-columns:repeat(4,1fr);align-items:center;min-height:42px}
+.trust-strip span{display:flex;align-items:center;justify-content:center;gap:9px;padding:8px 12px;text-align:center;font-size:10px;font-weight:500}
+.trust-strip span:before{content:'✦';color:var(--gold);font-size:8px}
 
 /* QUIZ */
 .quiz{padding-top:5px;padding-bottom:14px}
@@ -116,7 +120,10 @@ a{color:inherit}
 .six-grid article{text-align:center;font-size:8.5px;line-height:1.28}
 .six-grid .placeholder{min-height:130px;border-radius:7px;margin-bottom:7px}
 .six-grid b{font-weight:500}
-.center{text-align:center;font-size:10.5px;margin:14px 0 0;color:#74685f}
+.six-grid small{display:block;margin-top:3px;color:#82766c;font-size:8px}
+.assortment-action{text-align:center;margin-top:18px}
+.assortment-action p{font-size:10.5px;margin:0 0 11px;color:#74685f}
+.assortment-action .button{min-height:43px;min-width:300px;font-size:10px}
 
 /* QUALITY */
 .quality-section{background:#f6ede3;padding:20px 0}
@@ -165,14 +172,15 @@ a{color:inherit}
 /* REVIEWS */
 .reviews-section{padding-top:5px;padding-bottom:15px}
 .reviews-section h2{font-size:34px;margin-bottom:16px}
-.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.review-card{padding:18px 16px 15px;min-height:152px}
+.reviews{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;max-width:850px;margin:0 auto}
+.review-card{padding:21px 20px 18px;min-height:152px;border-top:3px solid rgba(216,163,74,.7)}
 .avatar{float:left;margin-right:9px;border-radius:50%;width:36px;height:36px;overflow:hidden;background:#d8b991}
 .avatar img{width:100%;height:100%;object-fit:cover;display:block}
 .review-head{min-height:38px}
-.review-head b{font-size:9.5px;display:block}
-.review-head small{font-size:8px;color:#8b8178}
-.review-card p{clear:both;font-size:9px;line-height:1.45;margin:11px 0 0}
+.review-head b{font-size:11px;display:block}
+.review-head small{font-size:8.5px;color:#8b8178}
+.review-card p{clear:both;font-size:10px;line-height:1.55;margin:11px 0 0}
+.review-note{text-align:center;max-width:620px;margin:11px auto 0;color:#8b8178;font-size:8px}
 .dots{text-align:center;color:#d3a04a;letter-spacing:3px;font-size:7px;margin-top:10px}
 
 /* DELIVERY */
@@ -263,6 +271,8 @@ a{color:inherit}
   .overlap{width:188px;bottom:14px;right:12px}
   .overlap .placeholder{min-height:92px}
   .contact-strip{flex-direction:column;text-align:center;gap:7px;padding:12px 0}
+  .trust-strip>.container{grid-template-columns:1fr 1fr;padding:6px 0}
+  .trust-strip span{justify-content:flex-start;text-align:left;padding:6px 5px;font-size:9px;gap:6px}
   .messengers{justify-content:center}
   .quiz-panel{padding:19px 12px 16px}
   .quiz-panel>h2{font-size:30px;margin-bottom:16px}
@@ -274,6 +284,7 @@ a{color:inherit}
   .process p{font-size:8.5px}
   .six-grid{grid-template-columns:repeat(6,155px)}
   .six-grid .placeholder{min-height:115px}
+  .assortment-action .button{width:100%;min-width:0}
   .quality-panel{grid-template-columns:1fr}
   .quality-panel>.placeholder{height:300px;border-radius:11px 11px 0 0}
   .quality-copy{padding:24px 20px 22px}
