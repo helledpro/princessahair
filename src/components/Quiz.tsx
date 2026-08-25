@@ -34,6 +34,7 @@ const wholesaleQuestions:Question[]=[
 ];
 
 const telegramProfileUrl='https://t.me/Princessahair_Studio';
+const maxProfileUrl='https://max.ru/u/f9LHodD0cOLI7eBgRW67C5HWZZQB128y7nKqu4YltKxZrV578bHWW_s2Td8';
 
 function isMobileDevice(){
   return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)
@@ -96,7 +97,6 @@ export function Quiz(){
   const encodedMessage=encodeURIComponent(contactMessage);
   const whatsappUrl=`https://wa.me/79633255266?text=${encodedMessage}`;
   const telegramMobileUrl=`https://t.me/Princessahair_Studio?text=${encodedMessage}`;
-  const maxUrl=`https://max.ru/:share?text=${encodedMessage}`;
 
   const handleTelegramClick=(event:MouseEvent<HTMLAnchorElement>)=>{
     if(isMobileDevice()) return;
@@ -105,18 +105,22 @@ export function Quiz(){
     window.open(telegramProfileUrl,'_blank','noopener,noreferrer');
   };
 
+  const handleMaxClick=()=>{
+    copyMessage(contactMessage);
+  };
+
   return <section className="quiz section" id="quiz">
     <div className="container panel quiz-panel">
       {done?<div className="quiz-result">
         <span className="quiz-result-kicker">Подбор готов</span>
         <h2>Куда отправить подходящие варианты?</h2>
-        <p>Ответы уже добавлены в сообщение. Выберите удобный мессенджер — останется только отправить.</p>
+        <p>Мы подготовили сообщение с вашими ответами. Выберите удобный мессенджер.</p>
         <div className="quiz-result-links">
           <a className="quiz-messenger wa" href={whatsappUrl} target="_blank" rel="noreferrer"><i/>WhatsApp</a>
           <a className="quiz-messenger tg" href={telegramMobileUrl} target="_blank" rel="noreferrer" onClick={handleTelegramClick}><i/>Telegram</a>
-          <a className="quiz-messenger mx" href={maxUrl} target="_blank" rel="noreferrer"><i/>MAX</a>
+          <a className="quiz-messenger mx" href={maxProfileUrl} target="_blank" rel="noreferrer" onClick={handleMaxClick}><i/>MAX</a>
         </div>
-        <small>После перехода отправьте фото своих волос при дневном освещении — так мы точнее подберём оттенок.</small>
+        <small>В MAX текст запроса копируется в буфер обмена — после перехода вставьте его в диалог. Затем отправьте фото своих волос при дневном освещении.</small>
         <button type="button" className="quiz-restart" onClick={()=>{setStep(0);setAnswers([]);setDone(false)}}>Пройти подбор заново</button>
       </div>:<>
         {step===0&&<div className="quiz-intro">
