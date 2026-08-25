@@ -121,6 +121,7 @@ export function Quiz(){
           <a className="quiz-messenger mx" href={maxProfileUrl} target="_blank" rel="noreferrer" onClick={handleMaxClick}><i/>MAX</a>
         </div>
         <small>В MAX текст запроса копируется в буфер обмена — после перехода вставьте его в диалог. Затем отправьте фото своих волос при дневном освещении.</small>
+        <small className="quiz-legal-note">Отправляя сообщение, вы соглашаетесь с <a href="/privacy.html" target="_blank" rel="noreferrer">Политикой обработки персональных данных</a> и <a href="/consent.html" target="_blank" rel="noreferrer">Согласием на обработку персональных данных</a>.</small>
         <button type="button" className="quiz-restart" onClick={()=>{setStep(0);setAnswers([]);setDone(false)}}>Пройти подбор заново</button>
       </div>:<>
         {step===0&&<div className="quiz-intro">
