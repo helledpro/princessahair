@@ -1,0 +1,30 @@
+.quiz-intro{text-align:center;max-width:760px;margin:0 auto 22px}
+.quiz-intro>span,.quiz-result-kicker{display:inline-block;margin-bottom:7px;color:#a6752f;font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.quiz-intro h2{margin:0 0 7px;font:600 35px/1.03 'Cormorant Garamond',serif}
+.quiz-intro p{max-width:610px;margin:0 auto;color:#75695f;font-size:10.5px;line-height:1.5}
+.quiz-panel>.quiz-question.first{font-size:27px;margin-bottom:17px}
+.quiz-progress-wrap small{display:block;margin-top:7px;color:#8c8178;font-size:8px}
+
+.quiz-result{max-width:720px;margin:0 auto;padding:28px 24px 24px;text-align:center}
+.quiz-result h2{margin:0 0 10px;font:600 36px/1.03 'Cormorant Garamond',serif}
+.quiz-result>p{max-width:540px;margin:0 auto 20px;color:#71655c;font-size:11px;line-height:1.55}
+.quiz-result-links{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:520px;margin:0 auto 15px}
+.quiz-messenger{min-height:52px;border-radius:7px;display:flex;align-items:center;justify-content:center;gap:9px;text-decoration:none!important;font-size:12px;font-weight:600;border:1px solid var(--line);background:#fff;box-shadow:0 7px 17px rgba(87,62,35,.08);transition:.18s}
+.quiz-messenger:hover{transform:translateY(-1px);box-shadow:0 9px 22px rgba(87,62,35,.12)}
+.quiz-messenger i{width:10px;height:10px;border-radius:50%}
+.quiz-messenger.wa i{background:#39b96a}
+.quiz-messenger.tg i{background:#3ea5dc}
+.quiz-result>small{display:block;max-width:570px;margin:0 auto;color:#8c8178;font-size:8.8px;line-height:1.45}
+.quiz-restart{margin-top:15px;padding:4px 0;border:0;background:transparent;color:#8a7254;font-size:9px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+
+@media(max-width:767px){
+  .quiz-intro{margin-bottom:17px;padding:0 5px}
+  .quiz-intro h2{font-size:30px}
+  .quiz-intro p{font-size:10px}
+  .quiz-panel>.quiz-question.first{font-size:24px;margin-bottom:14px}
+  .quiz-result{padding:22px 8px 18px}
+  .quiz-result h2{font-size:31px}
+  .quiz-result>p{font-size:10.5px}
+  .quiz-result-links{grid-template-columns:1fr;max-width:360px}
+  .quiz-messenger{min-height:50px}
+}
