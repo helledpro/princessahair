@@ -3,7 +3,7 @@ import {assortment,faqs,processSteps} from '../data';
 import {Button,MessengerLinks,Placeholder,Section} from './Common';
 
 const bullets=(items:string[])=><ul>{items.map(item=><li key={item}>{item}</li>)}</ul>;
-const reviewImages=['image (10).png','image (9).png','image (8).png','image (7).png','image (6).png','image (5).png','image (4).png','image (3).png'];
+const reviewImages=['image (10).png','image (9).png','image (8).png','image (7).png','image (6).png','image (5).png'];
 
 export function MainSections(){
   const [open,setOpen]=useState<number|null>(null);
