@@ -8,4 +8,5 @@ import './review-proof.css';
 import './mobile-sticky.css';
 import './legal.css';
 import './timed-popup.css';
+import './assortment-gallery.css';
 createRoot(document.getElementById('root')!).render(<React.StrictMode><App/></React.StrictMode>);
