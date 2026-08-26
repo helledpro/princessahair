@@ -1,9 +1,27 @@
 import {useState} from 'react';
-import {assortment,faqs,processSteps} from '../data';
+import {faqs,processSteps} from '../data';
 import {Button,MessengerLinks,Placeholder,Section} from './Common';
 
 const bullets=(items:string[])=><ul>{items.map(item=><li key={item}>{item}</li>)}</ul>;
 const reviewImages=['image (10).png','image (9).png','image (8).png','image (7).png','image (6).png','image (5).png'];
+const assortmentImages=[
+  'assortment-01.jpg',
+  'assortment-02.jpg',
+  'assortment-03.jpg',
+  'assortment-04.jpg',
+  'assortment-05.jpg',
+  'assortment-06.jpg',
+  'assortment-07.jpg',
+  'assortment-08.jpg',
+  'assortment-09.jpg',
+  'assortment-10.jpg',
+  'assortment-11.jpg',
+  'assortment-12.jpg',
+  'assortment-13.jpg',
+  'assortment-14.jpg',
+  'assortment-15.jpg',
+  'assortment-16.jpg'
+];
 
 export function MainSections(){
   const [open,setOpen]=useState<number|null>(null);
@@ -25,8 +43,8 @@ export function MainSections(){
     <Section className="assort">
       <h2>Большой ассортимент</h2>
       <div className="six-grid">
-        {assortment.map((item,index)=><article key={item[0]}>
-          <Placeholder name={`assortment-0${index+1}.jpg`}/>
+        {assortmentImages.map(image=><article key={image}>
+          <Placeholder name={image}/>
         </article>)}
       </div>
       <div className="assortment-action">
