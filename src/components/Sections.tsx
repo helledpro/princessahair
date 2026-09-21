@@ -96,6 +96,25 @@ export function MainSections(){
       <p className="review-proof-note">Отзывы опубликованы в исходном виде</p>
     </Section>
 
+    <section className="social-proof" aria-label="Сообщество Princessahair">
+      <div className="container social-proof__card">
+        <div className="social-proof__media">
+          <img src="/images/princessahair-instagram-profile.jpg" alt="Профиль Princessahair с большой аудиторией" loading="lazy"/>
+        </div>
+        <div className="social-proof__content">
+          <div className="social-proof__copy">
+            <span className="social-proof__kicker">Нам доверяют</span>
+            <h2>Большое сообщество Princessahair</h2>
+            <p>За брендом следят сотни тысяч человек. В аккаунте годами публикуем волосы, производство, работы и отзывы клиентов.</p>
+          </div>
+          <div className="social-proof__stats" aria-label="Статистика аккаунта Princessahair">
+            <div><strong>440 тыс.</strong><span>подписчиков</span></div>
+            <div><strong>3 300+</strong><span>публикаций</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <Section className="delivery-section">
       <div className="panel split delivery">
         <Placeholder name="delivery-box.jpg"/>
