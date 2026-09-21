@@ -141,7 +141,7 @@ export function MainSections(){
           <span>Новочеркасский просп., 33, корп. 2, Санкт-Петербург</span>
           <a href="https://yandex.ru/maps/org/princessahair_studio/185516093035" target="_blank" rel="noreferrer">Открыть в Яндекс Картах ↗</a>
           <a href="https://vk.ru/princessahair" target="_blank" rel="noreferrer">ВКонтакте ↗</a>
-          <a href="tel:+79633255266">+7 963 325-52-66</a>
+          <a href="tel:+79650650790">+7 965 065-07-90</a>
         </div>
         <div className="business-proof__legal">
           <b>Юридическая информация</b>
