@@ -95,7 +95,6 @@ export function Quiz(){
       :'Здравствуйте! Хочу подобрать волосы Princessahair.';
   const contactMessage=[requestIntro,...answerLines,'Пришлите, пожалуйста, подходящие варианты из наличия.'].join('\n');
   const encodedMessage=encodeURIComponent(contactMessage);
-  const whatsappUrl=`https://wa.me/79633255266?text=${encodedMessage}`;
   const telegramMobileUrl=`https://t.me/Princessahair_Studio?text=${encodedMessage}`;
 
   const handleTelegramClick=(event:MouseEvent<HTMLAnchorElement>)=>{
@@ -116,7 +115,6 @@ export function Quiz(){
         <h2>Куда отправить подходящие варианты?</h2>
         <p>Мы подготовили сообщение с вашими ответами. Выберите удобный мессенджер.</p>
         <div className="quiz-result-links">
-          <a className="quiz-messenger wa" href={whatsappUrl} target="_blank" rel="noreferrer"><i/>WhatsApp</a>
           <a className="quiz-messenger tg" href={telegramMobileUrl} target="_blank" rel="noreferrer" onClick={handleTelegramClick}><i/>Telegram</a>
           <a className="quiz-messenger mx" href={maxProfileUrl} target="_blank" rel="noreferrer" onClick={handleMaxClick}><i/>MAX</a>
         </div>
