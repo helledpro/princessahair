@@ -44,19 +44,5 @@ export function Hero(){
         {['100% натуральные волосы','Собственное производство','Реальные фото перед покупкой','Доставка 1–4 дня'].map(item=><span key={item}>{item}</span>)}
       </div>
     </div>
-    <section className="social-proof" aria-label="Сообщество Princessahair">
-      <div className="container social-proof__card">
-        <div className="social-proof__copy">
-          <span className="social-proof__kicker">Нам доверяют</span>
-          <h2>Большое сообщество Princessahair</h2>
-          <p>За брендом следят сотни тысяч человек — в аккаунте регулярно публикуем волосы, производство, работы и отзывы клиентов.</p>
-        </div>
-        <div className="social-proof__stats" aria-label="Статистика аккаунта Princessahair">
-          <div><strong>440 тыс.</strong><span>подписчиков</span></div>
-          <div><strong>3 300+</strong><span>публикаций</span></div>
-        </div>
-        <a className="social-proof__link" href="https://www.instagram.com/princessa_hair/" target="_blank" rel="noreferrer">@princessa_hair <span>↗</span></a>
-      </div>
-    </section>
   </>
 }
