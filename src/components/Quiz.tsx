@@ -33,7 +33,7 @@ const wholesaleQuestions:Question[]=[
   {title:'Как планируете закупать дальше?',label:'Поставки',options:['Разовая закупка','1–2 раза в месяц','Каждую неделю','Пока не знаю']}
 ];
 
-const telegramProfileUrl='https://t.me/Princessahair_Studio';
+const telegramProfileUrl='https://t.me/+79650650790';
 const maxProfileUrl='https://max.ru/u/f9LHodD0cOLI7eBgRW67C5HWZZQB128y7nKqu4YltKxZrV578bHWW_s2Td8';
 
 function isMobileDevice(){
@@ -95,7 +95,7 @@ export function Quiz(){
       :'Здравствуйте! Хочу подобрать волосы Princessahair.';
   const contactMessage=[requestIntro,...answerLines,'Пришлите, пожалуйста, подходящие варианты из наличия.'].join('\n');
   const encodedMessage=encodeURIComponent(contactMessage);
-  const telegramMobileUrl=`https://t.me/Princessahair_Studio?text=${encodedMessage}`;
+  const telegramMobileUrl=`https://t.me/+79650650790?text=${encodedMessage}`;
 
   const handleTelegramClick=(event:MouseEvent<HTMLAnchorElement>)=>{
     if(isMobileDevice()) return;
