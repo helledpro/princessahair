@@ -13,7 +13,6 @@ const photoPositions:Record<string,CSSProperties['objectPosition']>={
 
 const contactMessage='Здравствуйте! Хочу подобрать волосы Princessahair.';
 const encodedContactMessage=encodeURIComponent(contactMessage);
-const whatsappUrl=`https://wa.me/79633255266?text=${encodedContactMessage}`;
 const telegramProfileUrl='https://t.me/Princessahair_Studio';
 const telegramMobileUrl=`https://t.me/Princessahair_Studio?text=${encodedContactMessage}`;
 const maxProfileUrl='https://max.ru/u/f9LHodD0cOLI7eBgRW67C5HWZZQB128y7nKqu4YltKxZrV578bHWW_s2Td8';
@@ -75,7 +74,6 @@ export function Section({children,className='',id}:{children:ReactNode,className
 
 export function MessengerLinks(){
   return <nav className="messengers" aria-label="Мессенджеры">
-    <a id="whatsapp" className="wa" href={whatsappUrl} target="_blank" rel="noreferrer"><i/>WhatsApp</a>
     <a id="telegram" className="tg" href={telegramMobileUrl} target="_blank" rel="noreferrer" onClick={handleTelegramClick}><i/>Telegram</a>
     <a id="max" className="mx" href={maxProfileUrl} target="_blank" rel="noreferrer" onClick={handleMaxClick}><i/>MAX</a>
   </nav>
