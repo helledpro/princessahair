@@ -13,8 +13,8 @@ const photoPositions:Record<string,CSSProperties['objectPosition']>={
 
 const contactMessage='Здравствуйте! Хочу подобрать волосы Princessahair.';
 const encodedContactMessage=encodeURIComponent(contactMessage);
-const telegramProfileUrl='https://t.me/Princessahair_Studio';
-const telegramMobileUrl=`https://t.me/Princessahair_Studio?text=${encodedContactMessage}`;
+const telegramProfileUrl='https://t.me/+79650650790';
+const telegramMobileUrl=`https://t.me/+79650650790?text=${encodedContactMessage}`;
 const maxProfileUrl='https://max.ru/u/f9LHodD0cOLI7eBgRW67C5HWZZQB128y7nKqu4YltKxZrV578bHWW_s2Td8';
 
 function copyContactMessage(){
