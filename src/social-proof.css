@@ -1,0 +1,15 @@
+.social-proof{padding:18px 0 4px;background:#fffdf9}
+.social-proof__card{display:grid;grid-template-columns:1.45fr .9fr auto;gap:22px;align-items:center;padding:22px 26px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(135deg,#fff 0%,#fffaf5 58%,#f7ecdf 100%);box-shadow:var(--shadow)}
+.social-proof__copy{min-width:0}
+.social-proof__kicker{display:inline-block;margin-bottom:6px;color:#a6752f;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.social-proof__copy h2{margin:0 0 7px;text-align:left;font:600 30px/1.04 'Cormorant Garamond',serif;color:var(--ink)}
+.social-proof__copy p{margin:0;max-width:590px;color:#75695f;font-size:10.5px;line-height:1.55}
+.social-proof__stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.social-proof__stats>div{min-width:112px;padding:14px 13px;text-align:center;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.78)}
+.social-proof__stats strong{display:block;font:600 25px/1 'Cormorant Garamond',serif;color:var(--ink)}
+.social-proof__stats span{display:block;margin-top:5px;color:#786c62;font-size:8.8px}
+.social-proof__link{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:42px;padding:0 16px;border:1px solid #d8b47a;border-radius:8px;background:#fff9ef;color:#76501d;text-decoration:none;font-size:9.5px;font-weight:600;white-space:nowrap;transition:.18s}
+.social-proof__link:hover{transform:translateY(-1px);background:#fff5e6}
+.social-proof__link span{font-size:12px}
+@media(max-width:900px){.social-proof__card{grid-template-columns:1fr 1fr}.social-proof__link{grid-column:1/-1;justify-self:center}.social-proof__copy h2{font-size:28px}}
+@media(max-width:767px){.social-proof{padding:14px 0 2px}.social-proof__card{grid-template-columns:1fr;gap:14px;padding:18px 16px}.social-proof__copy{text-align:center}.social-proof__copy h2{text-align:center;font-size:28px}.social-proof__copy p{font-size:10px}.social-proof__stats{width:100%;max-width:330px;margin:0 auto}.social-proof__stats>div{min-width:0;padding:12px 8px}.social-proof__stats strong{font-size:23px}.social-proof__link{grid-column:auto;width:100%;max-width:330px;margin:0 auto}}
