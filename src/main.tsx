@@ -9,4 +9,5 @@ import './mobile-sticky.css';
 import './legal.css';
 import './timed-popup.css';
 import './assortment-gallery.css';
+import './social-proof.css';
 createRoot(document.getElementById('root')!).render(<React.StrictMode><App/></React.StrictMode>);
