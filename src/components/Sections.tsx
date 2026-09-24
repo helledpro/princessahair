@@ -117,6 +117,23 @@ export function MainSections(){
       </div>
     </Section>
 
+    <section className="social-proof" aria-label="Instagram Princessahair">
+      <div className="container social-proof__card">
+        <div className="social-proof__media">
+          <img src="/images/princessahair-instagram-profile.jpg" alt="Instagram Princessahair" loading="lazy"/>
+        </div>
+        <div className="social-proof__content">
+          <span className="social-proof__kicker">Нам доверяют</span>
+          <h2>Большое сообщество Princessahair</h2>
+          <p>За брендом следят сотни тысяч человек. В Instagram годами публикуем волосы, производство, работы и отзывы клиентов.</p>
+          <div className="social-proof__stats" aria-label="Статистика Instagram Princessahair">
+            <div><strong>440 тыс.</strong><span>подписчиков</span></div>
+            <div><strong>3 300+</strong><span>публикаций</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer className="final" id="contacts">
       <div className="container final-main">
         <div>
